@@ -1,0 +1,27 @@
+html {
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  
+  body {
+      font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
+      background-color: linen;
+  }
+
+#head {
+    text-align: center;
+    background-color: #062068;
+    color: white;
+    padding: 2%;
+}
+
+.panel-custom {
+    word-break: normal;
+    background-color:#062068;
+    color: white !important;
+}
+
+.table-hover {
+    margin: auto;
+}
