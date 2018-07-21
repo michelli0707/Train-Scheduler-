@@ -1,8 +1,8 @@
 // Global Variables
-var trainName = "";
-var trainDestination = "";
-var trainTime = "";
-var trainFrequency = "";
+var trainName = ["Hudson Line", "Harlem Line", "New Haven Line", "Port Jervis", "Pascack Valley",""];
+var trainDestination = ["Poughkeepsie", "White Plains", "Stamford", "Middletown", "Spring Valley", ""];
+var trainTime = ["5:00", "5:30", "5:00", "5:00", "5:00", "" ];
+var trainFrequency = ["30", "15", "15", "30", "30", ""];
 var nextArrival = "";
 var minutesAway = "";
 
@@ -14,8 +14,6 @@ var elTrainTime = $("#train-time").mask("00:00");
 var elTimeFreq = $("#time-freq").mask("00");
 
 
-
-
 var config = {
     apiKey: "AIzaSyDLzQ0vNacHdtppBph5WIW5GM6TFvbod9o",
     authDomain: "fir-project-46c3b.firebaseapp.com",
@@ -25,8 +23,6 @@ var config = {
     messagingSenderId: "272401155532"
   };
   firebase.initializeApp(config);
-
-
 
 var database = firebase.database();
 
@@ -115,7 +111,7 @@ var storeInputs = function(event) {
 $("#btn-add").on("click", function(event) {
     // form validation - if empty - alert
     if (elTrain.val().length === 0 || elTrainDestination.val().length === 0 || elTrainTime.val().length === 0 || elTimeFreq === 0) {
-        alert("Please Fill All Required Fields");
+        alert("Please complete all required fields");
     } else {
         // if form is filled out, run function
         storeInputs(event);
@@ -127,7 +123,7 @@ $('form').on("keypress", function(event) {
     if (event.which === 13) {
         // form validation - if empty - alert
         if (elTrain.val().length === 0 || elTrainDestination.val().length === 0 || elTrainTime.val().length === 0 || elTimeFreq === 0) {
-            alert("Please Fill All Required Fields");
+            alert("Please complete all required fields");
         } else {
             // if form is filled out, run function
             storeInputs(event);

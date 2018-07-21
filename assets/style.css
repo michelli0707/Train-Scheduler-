@@ -19,7 +19,9 @@ html {
 .panel-custom {
     word-break: normal;
     background-color:#062068;
-    color: white !important;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .table-hover {
